@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;500;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  padding: 3em;
+  color: #c18a8a;
+  border: 0.1em solid #ecf0f3;
+  box-shadow: -0.25em -0.2em 0.5em 0 rgba(255, 255, 255, 0.8) inset,
+    0.25em 0.2em 0.5em 0 rgba(173, 191, 204, 0.8) inset;
+}
+
+legend {
+  translate: 0 100%;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+[type="radio"] {
+  display: none;
+}
+
+.label-mbti {
+  position: relative;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  transition: 0.4s ease;
+  color: rgba(31, 32, 32, 0.5);
+}
+
+.label-mbti:hover {
+  color: inherit;
+}
+
+.label-mbti:before {
+  transition: 0.4s ease;
+  content: "";
+  border-radius: 100vmax;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  width: 2em;
+  height: 2em;
+  box-shadow: -0.5em -0.25em 0.5em 0 white, 0.5em 0.25em 1.25em 0 #adbfcc;
+  background-color: #eff2f5;
+  filter: blur(0.1em);
+  cursor: pointer;
+}
+
+.agree:checked + .label-mbti {
+  color: #31cccc;
+  text-indent: 0.5em;
+}
+
+.agree:checked + .label-mbti:before {
+  box-shadow: -0.5em -0.25em 0.5em 0 white, 0.5em 0.25em 1.25em 0 #adbfcc,
+    0.1em 0.1em 0 rgba(173, 191, 204, 0.5) inset,
+    0.2em 0.2em 0 rgba(205, 215, 223, 0.5) inset,
+    0.1em 0.1em 0 rgba(255, 255, 255, 0.5) inset,
+    -0.2em -0.2em 0 rgba(255, 255, 255, 0.5) inset;
+  background-color: #31cccc;
+}
+
+.disagree:checked + .label-mbti {
+  color: red;
+  text-indent: 0.5em;
+}
+
+.disagree:checked + .label-mbti:before {
+  box-shadow: -0.5em -0.25em 0.5em 0 white, 0.5em 0.25em 1.25em 0 #adbfcc,
+    0.1em 0.1em 0 rgba(173, 191, 204, 0.5) inset,
+    0.2em 0.2em 0 rgba(205, 215, 223, 0.5) inset,
+    0.1em 0.1em 0 rgba(255, 255, 255, 0.5) inset,
+    -0.2em -0.2em 0 rgba(255, 255, 255, 0.5) inset;
+  background-color: red;
+}
+
+.neutral:checked + .label-mbti {
+  color: rgb(177, 177, 177);
+  text-indent: 0.5em;
+}
+
+.neutral:checked + .label-mbti:before {
+  box-shadow: -0.5em -0.25em 0.5em 0 white, 0.5em 0.25em 1.25em 0 #adbfcc,
+    0.1em 0.1em 0 rgba(173, 191, 204, 0.5) inset,
+    0.2em 0.2em 0 rgba(205, 215, 223, 0.5) inset,
+    0.1em 0.1em 0 rgba(255, 255, 255, 0.5) inset,
+    -0.2em -0.2em 0 rgba(255, 255, 255, 0.5) inset;
+  background-color: rgb(177, 177, 177);
+}
